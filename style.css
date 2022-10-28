@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+::selection{
+    background:rgb(50, 75, 218);
+    color:#fff;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    padding:5px;
+    background:linear-gradient(rgb(219, 218, 238),rgb(79, 102, 232)) ;
+}
+.main{
+    margin:120px auto;
+    max-width: 400px;
+    width: 100%;
+    background: rgb(249, 250, 252);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 10px 10px 10px 3px rgba(0,0,0,0.2),
+                -10px -10px 10px 3px rgba(179, 175, 229, 0.2);
+}
+.main header{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.main .input{
+    display: flex;
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+.input input{
+    width: 85%;
+    outline: none;
+    height: 100%;
+    border: 1px solid rgb(239, 222, 222);
+    font-size: 17px;
+    border-radius: 10px;
+    padding-left:15px;
+    box-shadow: 2px 2px 2px 0.7px  rgba(0,0,0,0.2),
+                -2px -2px 2px 0.7px rgba(179, 175, 229, 0.2);
+    transition: all 0.3s ease;
+  }
+.input input:focus{
+    border: 2px solid rgb(164, 175, 237);
+}
+.input button{
+    width: 60px ;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: rgb(187, 196, 211);
+    color: aliceblue;
+    cursor: pointer;
+    font-size:14px ;
+    border-radius: 10px;
+    margin-left: 5px;
+    opacity: 0.8;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+.input button.active{
+    opacity: 1;
+    pointer-events: auto;
+    background: rgb(95, 95, 230);
+}
+.main .list{
+ max-height: 250px;
+ overflow-y: auto;
+}
+.list li{
+    list-style: none;
+    height: 45px;
+    line-height: 45px;
+    position: relative;
+    background: rgb(204, 218, 246);
+    border-radius: 3px;
+    margin-bottom: 19px;
+    padding: 0 15px;
+    cursor: default;
+    overflow: hidden;
+    word-wrap: break-word;
+}
+.list li .icon{
+    position: absolute;
+    right: -45px;
+    top: 50%;
+    transform: translateY(-50%);
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    color: #fff;
+    height: 30px;
+    padding: 10px 15px;
+    border-radius: 0 3px 3px 0;
+    background: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.list li:hover .icon{
+   right: 0px;
+}
+.list li span{
+    position: absolute;
+    right: -45px;
+    width: 45px;
+    text-align: center;
+    background: rgb(217, 30, 30);
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.list li:hover span{
+    right: 0px;
+    border-radius: 5px;
+    background: rgb(240, 80, 80);
+}
